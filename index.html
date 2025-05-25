@@ -5,99 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our 3-Month Anniversary Story ❤️</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.min.js"></script>
     <style>
-        /* Custom styles for a romantic touch */
+        /* Custom styles for a romantic and elegant touch */
         body {
-            font-family: 'Inter', sans-serif; /* Using Inter font as per instructions */
-            background: linear-gradient(to bottom right, #fce4ec, #e0f2f7); /* Soft gradient background */
+            font-family: 'Inter', sans-serif; /* Inter for body text */
+            background: radial-gradient(circle at top left, #fdfcfc, #f0e6f2, #e0f2f7); /* Ethereal radial gradient background */
             min-height: 100vh; /* Ensure full viewport height */
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 1rem; /* Add some padding for smaller screens */
+            padding: 2rem; /* Increased padding for more breathing room */
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         .container {
-            max-width: 800px; /* Max width for content */
+            max-width: 850px; /* Slightly wider container */
             width: 100%; /* Full width on smaller screens */
-            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
-            border-radius: 20px; /* More rounded corners */
-            padding: 2.5rem; /* Ample padding inside the container */
+            background-color: rgba(255, 255, 255, 0.9); /* More translucent white background */
+            backdrop-filter: blur(8px); /* Frosted glass effect */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
+            border-radius: 30px; /* Even more rounded corners for softness */
+            padding: 3.5rem; /* Ample padding inside the container */
             text-align: center;
-            animation: fadeIn 1.5s ease-out; /* Fade in animation for the container */
+            animation: fadeIn 1.8s ease-out; /* Slower fade in for more grace */
+            border: 1px solid rgba(255, 255, 255, 0.7); /* More visible subtle border */
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
+            from { opacity: 0; transform: translateY(-40px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-family: 'Playfair Display', serif; /* Elegant serif font for main heading */
+            font-weight: 700; /* Bolder for emphasis */
+            color: #b36691; /* A muted, sophisticated rose color */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Subtle text shadow */
+        }
+        h2 {
+            font-family: 'Playfair Display', serif; /* Elegant serif font for subheadings */
+            font-weight: 400; /* Regular weight for a softer look */
+            color: #7b68ee; /* A gentle lavender purple */
+        }
+        p {
+            font-weight: 300; /* Lighter font weight for body text */
+            color: #5a6270; /* A soft, warm grey for body text */
+            font-size: 1.15rem; /* Slightly larger text for readability */
+            line-height: 1.7; /* Improved line spacing for elegance */
         }
         .story-text {
             min-height: 100px; /* Ensure space for the story even if it's not yet typed */
+            font-size: 1.25rem; /* Slightly larger text for readability */
+            line-height: 1.8; /* Improved line spacing for elegance */
+            font-weight: 300; /* Lighter font weight for a softer look */
+            color: #4a5568; /* Slightly darker text for better contrast */
         }
-        /* Heartbeat animation for the button */
+        /* Refined button styling */
+        .elegant-button {
+            background: linear-gradient(to right, #e7a0b8, #c68fc0); /* Soft, pastel gradient */
+            color: white;
+            font-weight: 600; /* Semi-bold */
+            padding: 0.9rem 2.5rem; /* Adjusted padding */
+            border-radius: 50px; /* Fully rounded pill shape */
+            box-shadow: 0 6px 15px rgba(231, 160, 184, 0.4); /* Soft, matching shadow */
+            transition: all 0.3s ease-in-out; /* Smooth transitions */
+            border: none; /* No default border */
+            cursor: pointer;
+        }
+        .elegant-button:hover {
+            transform: translateY(-3px) scale(1.03); /* Subtle lift and scale on hover */
+            box-shadow: 0 10px 20px rgba(231, 160, 184, 0.5); /* More pronounced shadow on hover */
+            background: linear-gradient(to right, #c68fc0, #e7a0b8); /* Reverse gradient on hover */
+        }
+        /* Softer heartbeat animation for the button */
         .heartbeat-button {
-            animation: heartbeat 1.5s infinite;
+            animation: softHeartbeat 1.8s infinite ease-in-out; /* Slower, smoother heartbeat */
         }
-        @keyframes heartbeat {
+        @keyframes softHeartbeat {
             0% { transform: scale(1); }
-            20% { transform: scale(1.1); }
-            40% { transform: scale(1); }
-            60% { transform: scale(1.1); }
-            80% { transform: scale(1); }
+            15% { transform: scale(1.05); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.05); }
+            60% { transform: scale(1); }
             100% { transform: scale(1); }
         }
         /* Typewriter effect cursor blink */
         .typewriter-cursor::after {
             content: '|';
             animation: blink-caret .75s step-end infinite;
+            color: #888; /* Softer cursor color */
         }
         @keyframes blink-caret {
             from, to { border-color: transparent }
             50% { border-color: currentColor; }
         }
-        .video-container { /* Renamed from gif-container for clarity */
-            margin-bottom: 2rem; /* Space below the video */
+        .gif-container { /* Renamed from video-container for clarity */
+            margin-bottom: 2.8rem; /* Increased space below the image */
+            position: relative;
         }
-        .video-container video { /* Targeted video element */
-            max-width: 100%; /* Ensure video is responsive */
+        .gif-container img { /* Changed from video to img */
+            max-width: 100%;
             height: auto;
-            border-radius: 10px; /* Slightly rounded corners for the video */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for the video */
+            border-radius: 20px; /* More rounded corners for the image */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); /* Softer, slightly larger shadow for the image */
+            display: block;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="video-container">
-            <video src="changed kat.mp4"
-                   alt="Anniversary Video"
-                   loop autoplay muted playsinline
-                   onerror="this.onerror=null;this.src='https://placehold.co/400x200/FFC0CB/FFFFFF?text=Video+Not+Found';"
+        <div class="gif-container">
+            <img src="changed kat.gif"
+                   alt="Anniversary GIF"
+                   onerror="this.onerror=null;this.src='https://placehold.co/400x200/FFC0CB/FFFFFF?text=GIF+Not+Found';"
                    class="mx-auto">
-                Your browser does not support the video tag.
-            </video>
         </div>
 
-        <h1 class="text-4xl md:text-5xl font-bold text-pink-600 mb-6 leading-tight">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Happy 3-Month Anniversary, Ye rouhi ❤️
         </h1>
-        <p class="text-lg text-gray-700 mb-8">
-            
+        <p class="text-lg mb-8">
+            Press the button below to reveal our special story.
         </p>
 
         <button id="revealButton"
-                class="heartbeat-button bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-pink-300">
+                class="elegant-button heartbeat-button">
             Click Here
         </button>
 
-        <div id="storySection" class="mt-10 hidden">
-            <h2 class="text-3xl font-semibold text-purple-700 mb-4">Yassien & Houyam</h2>
-            <p id="storyContent" class="story-text text-xl text-gray-800 leading-relaxed whitespace-pre-wrap">
+        <div id="storySection" class="mt-14 hidden">
+            <h2 class="text-3xl font-semibold mb-4">Yassien & Houyam</h2>
+            <p id="storyContent" class="story-text whitespace-pre-wrap">
                 </p>
         </div>
     </div>
 
     <script>
+        // Declare jsConfetti globally or in a scope accessible by window.onload and typeWriter
+        let jsConfetti;
+
         // Get references to HTML elements
         const revealButton = document.getElementById('revealButton');
         const storySection = document.getElementById('storySection');
@@ -105,7 +151,7 @@
 
         // The story you want to share with your girlfriend
         // You can customize this text to make it personal and special!
-        const story = `ye rouhi , idk from where i should start , ive never thought id be in this situation doing a website and writing what im gonna write . but its true when they say "when u know u know" i knew that there is something special in you and im fr happy that i didnt give up and wanted what between us to work because look at us now i fr am the happiest mf in the world wallah the only thing in my mind lately is you , nothing else , you and you and only only youuuu , eni l taw leni fehem chnw amatli berrrasmi menich fehem chnw sarli to yassine ykoun hakka , i love u so so so so so so so so much and more than u think walah , its already been 3 months but felt like 3 years , happened a lot in these 3 months but one thing im sure of is wehenver we have a fight we always get closer because no one wants to lose the other one and i fr love this so so much i always notice it and i fking love it . what we will have in the summer ye rouhi is another challenge but well overcome it as we always do just let us follow our 3 rules "we dont give up on each other" "we dont forget our moments and what we had" "we imagine what we will have in the future" , i only want you and only you ye rouhii , u fr changed yassine 180° ye rouhi and i dont want this yassine to go away because he only exists when im w u . take care of him really well because he adoresss u and loves u so muuuuuchh . i always get flashbacks of our talks,our moments of literally everything and damn thats soooooo fkin good , even my dreams  im used to dream about me fighting black africans but since ive known u i only dream about us . hope we stick tgthr to end and we get more hotter more freakier more richer more everything tgthr , do u remember how we met first day ? haahaahah i cant forget that day walaaahhh i fr at that time wanted to see u so bad i wanted to see u irl i wanted to see the one i liked throug texting . do u remember our hugs our kisses ? do u rememebr how i cant stop looking at u? do u rememeber how i spam u with " yekhi enti aleh mizyena " . do u remember how we break up and one hour later we get back tgthr as if nth hppnd ? do u remember the broken chair of hadhazi utca ? do u remember imla2 fara8t ? fr i remember everything and i dont want to forget it even tho this year was tough for me but fr i had the best 3 months in my life because of u , and i want to thank u for being u ye rouhi and for being in my life , in fact you are actually my life enti 7yeti kollllll NHEBEK NHEBEK NHEBEK NHEBEEEEEKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK . till 30 year anniversary ye rouhi . 
+        const story = `ye rouhi , idk from where i should start , ive never thought id be in this situation doing a website and writing what im gonna write . but its true when they say "when u know u know" i knew that there is something special in you and im fr happy that i didnt give up and wanted what between us to work because look at us now i fr am the happiest mf in the world wallah the only thing in my mind lately is you , nothing else , you and you and only only youuuu , eni l taw leni fehem chnw amatli berrrasmi menich fehem chnw sarli to yassine ykoun hakka , i love u so so so so so so so so much and more than u think walah , its already been 3 months but felt like 3 years , happened a lot in these 3 months but one thing im sure of is wehenver we have a fight we always get closer because no one wants to lose the other one and i fr love this so so much i always notice it and i fking love it . what we will have in the summer ye rouhi is another challenge but well overcome it as we always do just let us follow our 3 rules "we dont give up on each other" "we dont forget our moments and what we had" "we imagine what we will have in the future" , i only want you and only you ye rouhii , u fr changed yassine 180° ye rouhi and i dont want this yassine to go away because he only exists when im w u . take care of him really well because he adoresss u and loves u so muuuuuchh . i always get flashbacks of our talks,our moments of literally everything and damn thats soooooo fkin good , even my dreams  im used to dream about me fighting black africans but since ive known u i only dream about us . hope we stick tgthr to end and we get more hotter more freakier more richer more everything tgthr , do u remember how we met first day ? haahaahah i cant forget that day walaaahhh i fr at that time wanted to see u so bad i wanted to see u irl i wanted to see the one i liked throug texting . do u remember our hugs our kisses ? do u rememebr how i cant stop looking at u? do u rememeber how i spam u with " yekhi enti aleh mizyena " . do u remember how we break up and one hour later we get back tgthr as if nth hppnd ? do u remember the broken chair of hadhazi utca ? do u remember imla2 fara8t ? fr i remember everything and i dont want to forget it even tho this year was tough for me but fr i had the best 3 months in my life because of u , and i want to thank u for being u ye rouhi and for being in my life , in fact you are actually my life enti 7yeti kollllll NHEBEK NHEBEK NHEBEK NHEBEEEEEKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK . till 30 year anniversary ye rouhi .
 update : i added this line when u told me "u forgot" did i actually forget ?;)`;
 
         let charIndex = 0; // Keep track of the current character to type
@@ -124,6 +170,16 @@ update : i added this line when u told me "u forgot" did i actually forget ?;)`;
             } else {
                 // Typing complete, remove the blinking cursor effect
                 storyContent.classList.remove('typewriter-cursor');
+                // Trigger confetti when the story is fully typed
+                if (jsConfetti) {
+                    jsConfetti.addConfetti({
+                        emojis: ['💖', '✨', '❤️', '💕', '🎉'],
+                        confettiNumber: 100,
+                        confettiRadius: 6,
+                    });
+                } else {
+                    console.error("JSConfetti is not initialized.");
+                }
             }
         }
 
@@ -145,10 +201,9 @@ update : i added this line when u told me "u forgot" did i actually forget ?;)`;
             typeWriter();
         });
 
-        // Optional: Add a simple confetti effect when the page loads or story is revealed
-        // For a real confetti effect, you'd integrate a library or more complex JS/CSS.
-        // This is a placeholder to suggest further enhancements.
         window.onload = () => {
+            // Initialize JS Confetti here, ensuring the library is loaded
+            jsConfetti = new JSConfetti();
             console.log("Website loaded! Ready for anniversary celebration.");
         };
     </script>
